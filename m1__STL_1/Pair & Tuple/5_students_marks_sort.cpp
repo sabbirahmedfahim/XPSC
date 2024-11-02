@@ -10,12 +10,12 @@ Munna 765 99.56
 Sabbir 234 86.43
 Fahim 654 67.86
 */
-class cmp {
+class cmp
+{
 public:
-    // CGPT suggested to add "const" before tuple<....>
-    bool operator()(const tuple<string, int, float>& s1, const tuple<string, int, float>& s2) {
-        // Sort by marks in descending order
-        return get<2>(s1) > get<2>(s2);
+    bool operator()(tuple<string, int, float> &Student1, tuple<string, int, float> &Students2)
+    {
+        return get<2>(Student1) > get<2>(Students2); // Sort by marks
     }
 };
 int main()
