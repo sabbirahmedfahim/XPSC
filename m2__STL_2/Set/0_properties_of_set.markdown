@@ -1,0 +1,2 @@
+- `set` is always sorted.  
+- `set` holds unique values.
