@@ -1,0 +1,8 @@
+- decimal to binary and vice versa
+- bitwise AND, OR, XOR
+- left shift, right, shift
+- check_kth_bit_on_or_off
+- print_on_and_off_bits
+- turn_on_kth_bit
+- turn_off_kth_bit
+- toggle_kth_bit
