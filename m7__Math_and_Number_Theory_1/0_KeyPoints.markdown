@@ -1,0 +1,6 @@
+- Divisors -> O(n), O(√n)
+- Primality test
+- GCD & LCM
+- Goldbachs conjecture
+- Modular Arithmetic
+- Binary expoenentiation
