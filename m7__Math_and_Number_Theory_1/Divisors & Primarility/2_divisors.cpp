@@ -25,8 +25,11 @@ int main()
     for (int i = 1; i <= sqrt(n); i++) // O(logN)
     {
         // cout << i << " " << n/i << " ";
-        if(n%i == 0) cout << i << " ";
-        if(i != n/i) cout << n/i << " "; // detect duplicates
+        if(n%i == 0) 
+        {
+            cout << i << " ";
+            if(i != n/i) cout << n/i << " "; // detect duplicates
+        }
     }
 
     cout << nl << nl;
@@ -40,8 +43,11 @@ int main()
     for (int i = 1; i * i <= n; i++) // O(logN) [ekh e kotha]
     {
         // cout << i << " " << n/i << " ";
-        if(n%i == 0) cout << i << " ";
-        if(i != n/i) cout << n/i << " "; // detect duplicates
+        if(n%i == 0) 
+        {
+            cout << i << " ";
+            if(i != n/i) cout << n/i << " "; // detect duplicates
+        }
     }
 
     cout << nl << nl;
@@ -50,8 +56,11 @@ int main()
     vector<ll> divisors;
     for (int i = 1; i <= sqrt(n); i++) // O(logN)
     {
-        if(n%i == 0) divisors.push_back(i);
-        if(i != n/i) divisors.push_back(n/i);
+        if(n%i == 0) 
+        {
+            divisors.push_back(i);
+            if(i != n/i) divisors.push_back(n/i);
+        }
     }
     sort(all(divisors));
     print(divisors);
