@@ -1,0 +1,4 @@
+- binary search
+- closest to the left
+- closest to the right
+- first occurence & last occurence
