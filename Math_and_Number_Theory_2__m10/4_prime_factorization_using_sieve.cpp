@@ -5,7 +5,7 @@
 #define print(c) for(auto e : c) cout << e << " "; cout << nl
 using namespace std;
 const int mxN = 30;
-vector<int> allPrimes;
+vector<int> primeNumbers;
 void sieve()
 {
     vector<bool> prime(mxN+1, true);
@@ -22,7 +22,7 @@ void sieve()
 
     for (int i = 2; i <= mxN; i++)
     {
-        if(prime[i]) allPrimes.push_back(i);
+        if(prime[i]) primeNumbers.push_back(i);
     }
     
 }
@@ -30,24 +30,24 @@ void primeFactOfN()
 {
     int n = 18;
 
-    vector<int> res;
-    map<int, int> cnt;
-    for (int i = 0; i < allPrimes.size(); i++)
+    vector<int> primeFactors;
+    map<int, int> factorCount;
+    for (int i = 0; i < primeNumbers.size(); i++)
     {
-        while (n%allPrimes[i] == 0)
+        while (n%primeNumbers[i] == 0)
         {
-            res.push_back(allPrimes[i]); // store the prime factor
-            cnt[allPrimes[i]]++; // cnt occurance of each factor
-            n /= allPrimes[i];
+            primeFactors.push_back(primeNumbers[i]); // store the prime factors
+            factorCount[primeNumbers[i]]++; // count occurance of each factor
+            n /= primeNumbers[i];
         }
     }
-    if(n != 1) res.push_back(n);
+    if(n != 1) primeFactors.push_back(n);
 
-    print(res);
+    print(primeFactors);
 
     cout << nl;
     
-    for(auto [key, val] : cnt)
+    for(auto [key, val] : factorCount)
     {
         cout << key << " -> " << val << nl; 
     } 
@@ -61,7 +61,7 @@ int main()
 
     primeFactOfN();
     
-    // print(allPrimes);
+    // print(primeNumbers);
 
     return 0;
 }
