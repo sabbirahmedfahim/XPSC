@@ -5,35 +5,33 @@
 #define print(v) for(auto data : v) cout << data << " "; cout << nl
 #define iOS ios_base::sync_with_stdio(false); cin.tie(NULL);
 using namespace std;
-
+/*
+lesson : n-th length e koyta subarray ache --> n*(n+1)/2
+*/
 int main()
 {
     iOS
 
-    int n; ll k; cin >> n >> k;
+    int n; ll s; cin >> n >> s;
     vector<ll> v(n);
     for(auto &data : v) cin >> data;
-
-    multiset<ll> ml; ll cnt = 0;
-
+    
+    ll cnt = 0, sum = 0;
     for (int l = 0, r = 0; r < n; r++)
     {
-        ml.insert(v[r]);
-        if(*--ml.end() - *ml.begin() <= k)
+        sum += v[r];
+        if(sum <= s) cnt += (r-l+1);
+        else 
         {
-            cnt += (r-l+1);
-        }
-        else
-        {
-            while (l <= r && *--ml.end()- *ml.begin() > k)
+            while (sum > s && l <= r) // to fix corner case, added: l <= r
             {
-                ml.erase(ml.find(v[l])); l++;
+                sum -= v[l]; l++;
             }
             cnt += (r-l+1);
         }
     }
-    
     cout << cnt << nl;
 
     return 0;
 }
+// https://codeforces.com/edu/course/2/lesson/9/2/practice/contest/307093/problem/C

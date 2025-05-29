@@ -1,16 +1,9 @@
-#include <bits/stdc++.h>
-#define nl '\n'
-#define ll long long int
-#define all(v) v.begin(),v.end()
-#define print(v) for(auto data : v) cout << data << " "; cout << nl
-#define iOS ios_base::sync_with_stdio(false); cin.tie(NULL);
-using namespace std;
-
-int main()
-{
-    iOS
-
-    string s; int k; cin >> s >> k;
+/*
+class Solution {
+  public:
+    int longestKSubstr(string &s, int k) 
+    {
+        // your code here
     int l = 0, r = 0;
     map<char, int> mp;
     int ans = -1;
@@ -29,7 +22,8 @@ int main()
         }
         r++;
     }
-    cout << ans << nl;
-
-    return 0;
-}
+    return ans;
+    }
+};
+*/
+// https://www.geeksforgeeks.org/problems/longest-k-unique-characters-substring0853/1
