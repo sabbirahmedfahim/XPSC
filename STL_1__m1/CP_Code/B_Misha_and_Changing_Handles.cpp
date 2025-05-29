@@ -35,3 +35,4 @@ int main() {
    // MikeMirzayanov = Misha
    return 0;
 }
+// https://codeforces.com/problemset/problem/501/B

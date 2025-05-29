@@ -35,3 +35,4 @@ int main() {
    cout << ans1 << " " << ans2 << '\n';
    return 0;
 }
+// https://codeforces.com/contest/381/problem/A
