@@ -1,0 +1,2 @@
+// too lazy to consume the logic and write the code, but i blv it's an amazing technique to reduce using extra ds.
+// this is the conpact version of the previous code, permutations, same statement, same result, in a compact way
